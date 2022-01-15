@@ -2,7 +2,10 @@
   "name": "organiclever-oss",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "preinstall": "node ./scripts/preInstall.js",
+    "postinstall": "node ./scripts/postInstall.js"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
