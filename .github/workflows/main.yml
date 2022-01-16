@@ -24,10 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Install Volta
-        run: curl https://get.volta.sh | bash
+      # use volta
+      - uses: volta-cli/action@v1
 
       # Runs a set of commands using the runners shell
       - name: Init Repo And Test
