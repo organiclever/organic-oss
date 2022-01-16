@@ -27,11 +27,15 @@ jobs:
       # use volta
       - uses: volta-cli/action@v1
 
+      - name: Install node
+        run: volta install node
+
+      - name: Install node
+        run: volta install yarn
+
       # Runs a set of commands using the runners shell
       - name: Init Repo
         run: |
-          volta install node,
-          volta install yarn,
           yarn install,
 
       - name: Test Affected
