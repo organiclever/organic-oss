@@ -6,7 +6,7 @@ const NX_JSON_TARGET = './nx.json';
 const cred = require('../organic-cred.json');
 const nxConfig = require(NX_JSON_TEMPLATE);
 
-console.log('Running pre-install script');
+console.log('Pre-install script - Starting');
 
 const accessToken = cred.accessToken;
 
@@ -19,3 +19,5 @@ fs.writeFile(NX_JSON_TARGET, JSON.stringify(newNxConfig), (err) => {
     console.log('Successfully wrote file');
   }
 });
+
+console.log('Pre-install script - Finished');

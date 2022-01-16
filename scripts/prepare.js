@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-console.log('Running prepare script');
+console.log('Prepare script - Starting');
 
 const prettifyList = ['./nx.json'];
 
@@ -16,4 +16,4 @@ exec('yarn husky install', (error, stdout, stderr) => {
   console.log(`stdout: ${stdout}`);
 });
 
-console.log('Finished running prepare script');
+console.log('Prepare script - Finished');

@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-console.log('Running post-install script');
+console.log('Post-install script - Starting');
 
 const prettifyList = ['./nx.json'];
 
@@ -19,4 +19,4 @@ exec(
   }
 );
 
-console.log('Finished running post-install script');
+console.log('Post-install script - Finished');
