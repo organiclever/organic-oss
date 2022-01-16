@@ -6,8 +6,6 @@ const CRED_FILE_PATH = '../organic-cred.json';
 
 const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 
-let cred;
-
 let nxCloudAuthToken;
 
 const isCredFileExist = fs.existsSync(CRED_FILE_PATH);
@@ -15,13 +13,8 @@ const nxCloudAuthTokenENV = process.env.NX_CLOUD_AUTH_TOKEN;
 
 if (isCredFileExist) {
   nxCloudAuthToken = require(CRED_FILE_PATH).accessToken;
-  console.log('use cred file');
 } else if (nxCloudAuthTokenENV) {
   nxCloudAuthToken = process.env.NX_CLOUD_AUTH_TOKEN;
-  console.log('use nx cloud auth token');
-} else {
-  // use default
-  console.log('nothing exist');
 }
 
 console.log('Pre-install script - Starting');
