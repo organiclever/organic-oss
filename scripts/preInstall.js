@@ -10,7 +10,13 @@ console.log('Pre-install script - Starting');
 
 const accessToken = cred.accessToken;
 
-const newNxConfig = { ...nxConfig, accessToken };
+let newNxConfig;
+
+if (accessToken) {
+  newNxConfig = { ...nxConfig, accessToken };
+} else {
+  newNxConfig = nxConfig;
+}
 
 fs.writeFile(NX_JSON_TARGET, JSON.stringify(newNxConfig), (err) => {
   if (err) {
