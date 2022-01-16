@@ -1,0 +1,12 @@
+{
+  "root": "apps/sample-go-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/sample-go-app",
+        "commands": ["go run main.go"]
+      }
+    }
+  }
+}

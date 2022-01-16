@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "sample-go-app": "apps/sample-go-app",
     "sample-node-app": "apps/sample-node-app",
+    "sample-python-app": "apps/sample-python-app",
     "complex-node-lib": "libs/complex-node-lib",
     "simple-node-lib": "libs/simple-node-lib"
   }

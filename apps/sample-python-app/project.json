@@ -1,0 +1,12 @@
+{
+  "root": "apps/sample-python-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/sample-python-app",
+        "commands": ["python app.py"]
+      }
+    }
+  }
+}
