@@ -29,11 +29,10 @@ jobs:
 
       - name: Install node
         run: |
-          volta install node,
           volta pin node
 
       - name: Install yarn
-        run: volta install yarn
+        run: volta pin yarn
 
       # Runs a set of commands using the runners shell
       - name: Init Repo
