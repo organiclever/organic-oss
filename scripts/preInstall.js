@@ -3,7 +3,12 @@ const fs = require('fs');
 const NX_JSON_TEMPLATE = '../generator/template/nx-json-template.json';
 const NX_JSON_TARGET = './nx.json';
 
-const cred = require('../organic-cred.json');
+let cred;
+
+try {
+  cred = require('../organic-cred.json');
+} catch (e) {}
+
 const nxConfig = require(NX_JSON_TEMPLATE);
 
 console.log('Pre-install script - Starting');
