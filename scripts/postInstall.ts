@@ -6,7 +6,7 @@ const prettifyList = ['./nx.json'];
 
 exec(
   `yarn prettier --write ${prettifyList.join(' ')}`,
-  (error, stdout, stderr) => {
+  (error: any, stdout: any, stderr: any) => {
     if (error) {
       console.log(`error: ${error.message}`);
       return;
@@ -20,3 +20,5 @@ exec(
 );
 
 console.log('Post-install script - Finished');
+
+export {};

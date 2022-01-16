@@ -52,3 +52,5 @@ const newNxConfigAsString = JSON.stringify(newNxConfig, null, 2);
 fs.writeFileSync(NX_JSON_PATH, newNxConfigAsString);
 
 console.log('Pre-install script - Finished');
+
+export {};
