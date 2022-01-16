@@ -9,10 +9,15 @@ const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 let cred;
 
 const isCredFileExist = fs.existsSync(CRED_FILE_PATH);
+const isNXCloudAuthTokenEnvExist = process.env.NX_CLOUD_AUTH_TOKEN;
+
+console.log('NX_CLOUD_AUTH_TOKEN: ', process.env.NX_CLOUD_AUTH_TOKEN);
 
 if (isCredFileExist) {
   cred = require(CRED_FILE_PATH);
 }
+
+console.log(isNXCloudAuthTokenEnvExist);
 
 console.log('Pre-install script - Starting');
 
