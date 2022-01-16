@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const NX_JSON_TEMPLATE_PATH = '../generator/template/nx-json-template.json';
+const NX_JSON_TEMPLATE_PATH = '../tools/template/nx-json-template.json';
 const NX_JSON_PATH = './nx.json';
 const CRED_FILE_PATH = '../organic-cred.json';
 
