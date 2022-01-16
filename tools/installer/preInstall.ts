@@ -3,10 +3,10 @@ const path = require('path');
 
 const NX_JSON_TEMPLATE_PATH = path.join(
   __dirname,
-  '../tools/template/nx-json-template.json'
+  '../template/nx-json-template.json'
 );
-const NX_JSON_PATH = path.join(__dirname, '../nx.json');
-const CRED_FILE_PATH = path.join(__dirname, '../organic-cred.json');
+const NX_JSON_PATH = path.join(__dirname, '../../nx.json');
+const CRED_FILE_PATH = path.join(__dirname, '../../organic-cred.json');
 
 const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 
