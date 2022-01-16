@@ -1,0 +1,12 @@
+{
+  "root": "apps/sample-node-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/sample-node-app",
+        "commands": ["yarn test"]
+      }
+    }
+  }
+}

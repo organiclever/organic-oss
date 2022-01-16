@@ -1,8 +1,12 @@
 const fs = require('fs');
+const path = require('path');
 
-const NX_JSON_TEMPLATE_PATH = '../tools/template/nx-json-template.json';
-const NX_JSON_PATH = '../nx.json';
-const CRED_FILE_PATH = '../organic-cred.json';
+const NX_JSON_TEMPLATE_PATH = path.join(
+  __dirname,
+  '../tools/template/nx-json-template.json'
+);
+const NX_JSON_PATH = path.join(__dirname, '../nx.json');
+const CRED_FILE_PATH = path.join(__dirname, '../organic-cred.json');
 
 const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 
@@ -15,6 +19,10 @@ if (isCredFileExist) {
   nxCloudAuthToken = require(CRED_FILE_PATH).accessToken;
 } else if (nxCloudAuthTokenENV) {
   nxCloudAuthToken = process.env.NX_CLOUD_AUTH_TOKEN;
+} else {
+  console.log(
+    'Cred File and NX_CLOUD_AUTH_TOKEN ENV are not found. Not using cache for NX'
+  );
 }
 
 console.log('Pre-install script - Starting');
@@ -41,12 +49,6 @@ if (nxCloudAuthToken) {
 
 const newNxConfigAsString = JSON.stringify(newNxConfig, null, 2);
 
-fs.writeFile(NX_JSON_PATH, newNxConfigAsString, (err) => {
-  if (err) {
-    console.log('Error writing file', err);
-  } else {
-    console.log('Successfully wrote file');
-  }
-});
+fs.writeFileSync(NX_JSON_PATH, newNxConfigAsString);
 
 console.log('Pre-install script - Finished');

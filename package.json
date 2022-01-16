@@ -11,6 +11,9 @@
     "node": "14.18.1",
     "yarn": "1.22.17"
   },
+  "workspaces": [
+    "libs/*"
+  ],
   "lint-staged": {
     "*.{js,ts,tsx,jsx,css,md,json,yml,yaml}": "yarn prettier --write",
     "*.{fs,fsx}": "fantomas",

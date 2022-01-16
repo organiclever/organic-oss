@@ -1,0 +1,13 @@
+{
+  "root": "libs/simple-node-lib",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "libs/simple-node-lib",
+        "commands": ["yarn test"]
+      }
+    }
+  },
+  "implicitDependencies": []
+}

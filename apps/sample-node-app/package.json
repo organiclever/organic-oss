@@ -1,0 +1,10 @@
+{
+  "name": "@auditorium/sample-node-app",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "@auditorium/complex-node-lib": "*"
+  }
+}

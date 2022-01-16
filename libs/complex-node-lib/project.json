@@ -1,0 +1,12 @@
+{
+  "root": "libs/complex-node-lib",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "libs/complex-node-lib",
+        "commands": ["yarn test"]
+      }
+    }
+  }
+}
