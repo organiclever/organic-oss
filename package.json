@@ -20,9 +20,8 @@
     "*.go": "go fmt"
   },
   "scripts": {
-    "first": "./scripts/first.sh",
     "postinstall": "npx ts-node ./scripts/postInstall.ts",
-    "preinstall": "yarn first && npx ts-node ./scripts/preInstall.ts",
+    "preinstall": "./scripts/init.sh && npx ts-node ./scripts/preInstall.ts",
     "prepare": "npx ts-node ./scripts/prepare.ts",
     "test:affected": "nx affected --target=test --base=remotes/origin/main",
     "test:all": "nx run-many --target=test --all ",
@@ -38,6 +37,7 @@
     "husky": "7.0.4",
     "lint-staged": "12.1.7",
     "prettier": "2.5.1",
+    "ts-node": "10.4.0",
     "typescript": "4.5.4"
   }
 }
