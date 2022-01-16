@@ -17,9 +17,12 @@
     "*.go": "go fmt"
   },
   "scripts": {
-    "preinstall": "node ./scripts/preInstall.js",
     "postinstall": "node ./scripts/postInstall.js",
-    "prepare": "node ./scripts/prepare.js"
+    "preinstall": "node ./scripts/preInstall.js",
+    "prepare": "node ./scripts/prepare.js",
+    "test:affected": "nx affected --target=test",
+    "test:all": "nx affected --target=test",
+    "test": "yarn test:affected"
   },
   "dependencies": {},
   "devDependencies": {
