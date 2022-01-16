@@ -2,11 +2,19 @@
   "name": "organiclever-oss",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "14.18.1",
+    "yarn": "1.22.17"
+  },
+  "volta": {
+    "node": "14.18.1",
+    "yarn": "1.22.17"
+  },
   "scripts": {
     "preinstall": "node ./scripts/preInstall.js",
     "postinstall": "node ./scripts/postInstall.js"
   },
-  "private": true,
   "dependencies": {},
   "devDependencies": {
     "@nrwl/cli": "13.4.5",
