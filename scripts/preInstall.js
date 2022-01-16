@@ -8,25 +8,28 @@ const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 
 let cred;
 
-const isCredFileExist = fs.existsSync(CRED_FILE_PATH);
-const isNXCloudAuthTokenEnvExist = process.env.NX_CLOUD_AUTH_TOKEN;
+let nxCloudAuthToken;
 
-console.log('NX_CLOUD_AUTH_TOKEN: ', process.env.NX_CLOUD_AUTH_TOKEN);
+const isCredFileExist = fs.existsSync(CRED_FILE_PATH);
+const nxCloudAuthTokenENV = process.env.NX_CLOUD_AUTH_TOKEN;
 
 if (isCredFileExist) {
-  cred = require(CRED_FILE_PATH);
+  nxCloudAuthToken = require(CRED_FILE_PATH).accessToken;
+  console.log('use cred file');
+} else if (nxCloudAuthTokenENV) {
+  nxCloudAuthToken = process.env.NX_CLOUD_AUTH_TOKEN;
+  console.log('use nx cloud auth token');
+} else {
+  // use default
+  console.log('nothing exist');
 }
-
-console.log(isNXCloudAuthTokenEnvExist);
 
 console.log('Pre-install script - Starting');
 
-const accessToken = isCredFileExist ? cred.accessToken : null;
-
 let newNxConfig;
 
-if (accessToken) {
-  newNxConfig = { ...nxConfig, accessToken };
+if (nxCloudAuthToken) {
+  newNxConfig = { ...nxConfig, accessToken: nxCloudAuthToken };
 } else {
   newNxConfig = nxConfig;
 }
