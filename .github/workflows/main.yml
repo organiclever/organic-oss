@@ -24,8 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: volta-cli/action@v1
-      - run: npm install
-      - run: npm test
+      - run: yarn install
+      - run: yarn test
 
       - name: Init Repo
         run: |
