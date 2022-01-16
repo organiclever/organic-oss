@@ -1,19 +1,22 @@
 const fs = require('fs');
 
-const NX_JSON_TEMPLATE = '../generator/template/nx-json-template.json';
-const NX_JSON_TARGET = './nx.json';
+const NX_JSON_TEMPLATE_PATH = '../generator/template/nx-json-template.json';
+const NX_JSON_PATH = './nx.json';
+const CRED_FILE_PATH = '../organic-cred.json';
+
+const nxConfig = require(NX_JSON_TEMPLATE_PATH);
 
 let cred;
 
-try {
-  cred = require('../organic-cred.json');
-} catch (e) {}
+const isCredFileExist = fs.existsSync(CRED_FILE_PATH);
 
-const nxConfig = require(NX_JSON_TEMPLATE);
+if (isCredFileExist) {
+  cred = require(CRED_FILE_PATH);
+}
 
 console.log('Pre-install script - Starting');
 
-const accessToken = cred.accessToken;
+const accessToken = isCredFileExist ? cred.accessToken : null;
 
 let newNxConfig;
 
@@ -23,7 +26,7 @@ if (accessToken) {
   newNxConfig = nxConfig;
 }
 
-fs.writeFile(NX_JSON_TARGET, JSON.stringify(newNxConfig), (err) => {
+fs.writeFile(NX_JSON_PATH, JSON.stringify(newNxConfig), (err) => {
   if (err) {
     console.log('Error writing file', err);
   } else {
