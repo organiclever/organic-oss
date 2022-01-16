@@ -28,7 +28,9 @@ jobs:
       - uses: volta-cli/action@v1
 
       - name: Install node
-        run: volta pin node
+        run: |
+          volta install node,
+          volta pin node
 
       - name: Install yarn
         run: volta install yarn
