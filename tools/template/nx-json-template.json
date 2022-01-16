@@ -1,5 +1,5 @@
 {
-  "npmScope": "auditorium",
+  "npmScope": "hall",
   "extends": "@nrwl/workspace/presets/core.json",
   "affected": { "defaultBase": "main" },
   "cli": { "defaultCollection": "@nrwl/workspace" },

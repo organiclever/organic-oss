@@ -1,5 +1,5 @@
 {
-  "name": "@auditorium/simple-node-lib",
+  "name": "@hall/simple-node-lib",
   "version": "0.0.1",
   "scripts": {
     "test": "node index.js"
