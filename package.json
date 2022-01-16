@@ -11,9 +11,15 @@
     "node": "14.18.1",
     "yarn": "1.22.17"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,css,md,json,yml,yaml}": "yarn prettier --write",
+    "*.{fs,fsx}": "fantomas",
+    "*.go": "go fmt"
+  },
   "scripts": {
     "preinstall": "node ./scripts/preInstall.js",
-    "postinstall": "node ./scripts/postInstall.js"
+    "postinstall": "node ./scripts/postInstall.js",
+    "prepare": "node ./scripts/prepare.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -22,6 +28,8 @@
     "@nrwl/tao": "13.4.5",
     "@nrwl/workspace": "13.4.5",
     "@types/node": "14.14.33",
+    "husky": "7.0.4",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.3.1",
     "typescript": "~4.4.3"
   }
