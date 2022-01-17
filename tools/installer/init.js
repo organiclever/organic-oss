@@ -1,10 +1,17 @@
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 console.log('Init script - Starting');
 
-execSync(
-  'yarn global add typescript@4.5.4 && yarn global add ts-node@10.4.0 && yarn global add @types/node@14.14.33',
-  { stdio: 'inherit' }
-);
+const packageJSONFile = path.join(__dirname, '../../package.json');
+const rawPackageJson = fs.readFileSync(packageJSONFile, 'utf8');
+
+const installGlobalPackages = ['typescript', 'ts-node', '@types/node']
+  .map((p) => `${p}@${JSON.parse(rawPackageJson).devDependencies[p]}`)
+  .map((p) => `yarn global add ${p}`)
+  .join(' && ');
+
+execSync(installGlobalPackages, { stdio: 'inherit' });
 
 console.log('Init script - Finished');
