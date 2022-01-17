@@ -1,20 +1,8 @@
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 
 console.log('Prepare script - Starting');
 
-const prettifyList = ['./nx.json'];
-
-exec('yarn husky install', (error: any, stdout: any, stderr: any) => {
-  if (error) {
-    console.log(`error: ${error.message}`);
-    return;
-  }
-  if (stderr) {
-    console.log(`stderr: ${stderr}`);
-    return;
-  }
-  console.log(`stdout: ${stdout}`);
-});
+execSync('yarn husky install', { stdio: 'inherit' });
 
 console.log('Prepare script - Finished');
 

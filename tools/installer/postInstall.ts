@@ -1,23 +1,14 @@
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
+const path = require('path');
 
 console.log('Post-install script - Starting');
 
+// Relative to the root
 const prettifyList = ['./nx.json'];
 
-exec(
-  `yarn prettier --write ${prettifyList.join(' ')}`,
-  (error: any, stdout: any, stderr: any) => {
-    if (error) {
-      console.log(`error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`stdout: ${stdout}`);
-  }
-);
+execSync(`yarn prettier --write ${prettifyList.join(' ')}`, {
+  stdio: 'inherit',
+});
 
 console.log('Post-install script - Finished');
 

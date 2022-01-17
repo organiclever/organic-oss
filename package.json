@@ -20,9 +20,8 @@
     "*.go": "go fmt"
   },
   "scripts": {
-    "first": "./tools/installer/init.sh",
     "postinstall": "npx ts-node ./tools/installer/postInstall.ts",
-    "preinstall": "./tools/installer/init.sh && npx ts-node ./tools/installer/preInstall.ts",
+    "preinstall": "node tools/installer/init.js && npx ts-node ./tools/installer/preInstall.ts",
     "prepare": "npx ts-node ./tools/installer/prepare.ts",
     "test:affected": "nx affected --target=test --base=remotes/origin/main",
     "test:all": "nx run-many --target=test --all ",
