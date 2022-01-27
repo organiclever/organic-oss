@@ -1,0 +1,7 @@
+{
+  "name": "@hall/ts-utils",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "yarn ts-node index.ts"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "root": "libs/ts-utils",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "libs/ts-utils",
+        "commands": ["yarn test"]
+      }
+    }
+  },
+  "implicitDependencies": []
+}

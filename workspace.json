@@ -4,7 +4,9 @@
     "complex-node-lib": "libs/complex-node-lib",
     "sample-go-app": "apps/sample-go-app",
     "sample-node-app": "apps/sample-node-app",
+    "sample-node-ts-app": "apps/sample-node-ts-app",
     "sample-python-app": "apps/sample-python-app",
-    "simple-node-lib": "libs/simple-node-lib"
+    "simple-node-lib": "libs/simple-node-lib",
+    "ts-utils": "libs/ts-utils"
   }
 }

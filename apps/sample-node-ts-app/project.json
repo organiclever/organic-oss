@@ -1,0 +1,13 @@
+{
+  "root": "libs/sample-node-ts-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/sample-node-ts-app",
+        "commands": ["yarn test"]
+      }
+    }
+  },
+  "implicitDependencies": []
+}

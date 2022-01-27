@@ -12,7 +12,8 @@
     "yarn": "1.22.17"
   },
   "workspaces": [
-    "libs/*"
+    "libs/*",
+    "apps/*"
   ],
   "lint-staged": {
     "*.{js,ts,tsx,jsx,css,md,json,yml,yaml}": "yarn prettier --write",
