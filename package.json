@@ -39,6 +39,6 @@
     "lint-staged": "latest",
     "prettier": "2.5.1",
     "ts-node": "10.6.0",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   }
 }
