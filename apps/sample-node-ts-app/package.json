@@ -1,7 +1,6 @@
 {
   "name": "@hall/sample-ts-node-app",
   "version": "0.0.1",
-  "type": "module",
   "scripts": {
     "test": "yarn ts-node index.ts"
   }
