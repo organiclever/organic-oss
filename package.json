@@ -36,7 +36,7 @@
     "@nrwl/workspace": "13.4.5",
     "@types/node": "17.0.21",
     "husky": "7.0.4",
-    "lint-staged": "12.1.7",
+    "lint-staged": "latest",
     "prettier": "2.5.1",
     "ts-node": "10.6.0",
     "typescript": "4.5.5"
