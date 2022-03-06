@@ -1,6 +1,7 @@
 # Organic OSS
 
 [![Repo Test](https://github.com/organiclever/organic-oss/actions/workflows/repo-test.yml/badge.svg?branch=main)](https://github.com/organiclever/organic-oss/actions/workflows/repo-test.yml)
+[![License](https://img.shields.io/npm/l/@nrwl/workspace.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 This project was generated using [Nx](https://nx.dev).
 
