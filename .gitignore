@@ -39,5 +39,4 @@ testem.log
 Thumbs.db
 
 # secrets
-organic-cred.json
-nx.json
+repo-creds.json
