@@ -1,4 +1,4 @@
-name: Repo Test
+name: repo-test
 
 # Controls when the workflow will run
 on:
