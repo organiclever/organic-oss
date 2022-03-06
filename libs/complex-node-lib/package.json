@@ -1,10 +1,10 @@
 {
-  "name": "@hall/complex-node-lib",
+  "name": "@organic-oss/complex-node-lib",
   "version": "0.0.1",
   "scripts": {
     "test": "node index.js"
   },
   "dependencies": {
-    "@hall/simple-node-lib": "*"
+    "@organic-oss/simple-node-lib": "*"
   }
 }

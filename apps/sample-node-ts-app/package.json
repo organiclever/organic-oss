@@ -1,5 +1,5 @@
 {
-  "name": "@hall/sample-ts-node-app",
+  "name": "@organic-oss/sample-ts-node-app",
   "version": "0.0.1",
   "scripts": {
     "test": "yarn ts-node index.ts"
