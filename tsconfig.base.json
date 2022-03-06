@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@hall/ts-utils": ["libs/ts-utils/index.ts"]
+      "@organic-oss/ts-utils": ["libs/ts-utils/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,4 @@
-# Hall
+# Organic OSS
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -43,7 +43,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are shareable across libraries and applications. They can be imported from `@hall/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@organic-oss/mylib`.
 
 ## Development server
 

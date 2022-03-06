@@ -1,5 +1,5 @@
 {
-  "name": "@hall/simple-node-lib",
+  "name": "@organic-oss/simple-node-lib",
   "version": "0.0.1",
   "scripts": {
     "test": "node index.js"

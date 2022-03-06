@@ -1,5 +1,5 @@
 {
-  "npmScope": "hall",
+  "npmScope": "organic-oss",
   "extends": "@nrwl/workspace/presets/core.json",
   "affected": {
     "defaultBase": "main"
