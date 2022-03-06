@@ -7,6 +7,13 @@
         "cwd": "libs/ts-utils",
         "commands": ["yarn test"]
       }
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "libs/ts-utils",
+        "commands": ["yarn build"]
+      }
     }
   },
   "implicitDependencies": []

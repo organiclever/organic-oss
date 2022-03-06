@@ -2,6 +2,7 @@
   "name": "@organic-oss/ts-utils",
   "version": "0.0.1",
   "scripts": {
-    "test": "yarn ts-node index.ts"
+    "test": "yarn ts-node index.ts",
+    "build": "yarn tsc"
   }
 }
