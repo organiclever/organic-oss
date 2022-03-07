@@ -8,7 +8,7 @@
         "commands": ["yarn test"]
       }
     },
-    "test:watch": {
+    "test-watch": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "cwd": "libs/ts-utils",
