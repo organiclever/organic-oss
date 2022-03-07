@@ -1,8 +1,17 @@
 {
+  "author": "wahidyankf",
+  "description": "ts utility",
+  "license": "MIT",
+  "main": "src/index",
   "name": "@organic-oss/ts-utils",
+  "types": "src/index",
   "version": "0.0.1",
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "test": "yarn ts-node index.ts",
+    "test:watch": "yarn jest --watch",
+    "test": "yarn jest",
     "build": "yarn tsc"
   }
 }
